@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B18DAE9-272F-465A-AE82-BDDDF507780B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinancialManager_VukJan</RootNamespace>
+    <AssemblyName>FinancialManager_VukJan</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmAddExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddExpense.Designer.cs">
+      <DependentUpon>FrmAddExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckExpense.Designer.cs">
+      <DependentUpon>FrmCheckExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeleteExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeleteExpense.Designer.cs">
+      <DependentUpon>FrmDeleteExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddIncome.Designer.cs">
+      <DependentUpon>FrmAddIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeleteIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeleteIncome.Designer.cs">
+      <DependentUpon>FrmDeleteIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSignIn.Designer.cs">
+      <DependentUpon>FrmSignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSystem.Designer.cs">
+      <DependentUpon>FrmSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateExpense.Designer.cs">
+      <DependentUpon>FrmUpdateExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateExpenses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateExpenses.Designer.cs">
+      <DependentUpon>FrmUpdateExpenses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIncomeXOutcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncomeXOutcome.Designer.cs">
+      <DependentUpon>FrmIncomeXOutcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateIncome.Designer.cs">
+      <DependentUpon>FrmUpdateIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewIncome.Designer.cs">
+      <DependentUpon>FrmViewIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models - Classes\Expense.cs" />
+    <Compile Include="Models - Classes\Income.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAddExpense.resx">
+      <DependentUpon>FrmAddExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheckExpense.resx">
+      <DependentUpon>FrmCheckExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeleteExpense.resx">
+      <DependentUpon>FrmDeleteExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddIncome.resx">
+      <DependentUpon>FrmAddIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeleteIncome.resx">
+      <DependentUpon>FrmDeleteIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSignIn.resx">
+      <DependentUpon>FrmSignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSystem.resx">
+      <DependentUpon>FrmSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateExpense.resx">
+      <DependentUpon>FrmUpdateExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateExpenses.resx">
+      <DependentUpon>FrmUpdateExpenses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncomeXOutcome.resx">
+      <DependentUpon>FrmIncomeXOutcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateIncome.resx">
+      <DependentUpon>FrmUpdateIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewIncome.resx">
+      <DependentUpon>FrmViewIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
