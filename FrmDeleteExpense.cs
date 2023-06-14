@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialManager_VukJan.Models___Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace FinancialManager_VukJan
 {
     public partial class FrmDeleteExpense : Form
     {
+        Baza fn = new Baza();
         public FrmDeleteExpense()
         {
             InitializeComponent();
@@ -29,13 +31,52 @@ namespace FinancialManager_VukJan
         {
             if(MessageBox.Show("Are you sure?", "Izbrisati trošak?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
+                int id = Convert.ToInt32(cbmExpenseID.SelectedItem.ToString());
+                string query = "delete from Expenses where ID_Expense='" + id + "'";
+                fn.setData(query, "Trošak je izbrisan iz baze!");
             }
             else
             {
-                MessageBox.Show("Expense is not deleted!","Izbrisati trošak?", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Trošak nije izbrisan!","Izbrisati trošak?", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-        
+
+        private void FrmDeleteExpense_Load(object sender, EventArgs e)
+        {
+            string query1 = "Select ID_Expense from Expenses";
+
+            DataSet ds = fn.getData(query1);
+            int[] Ids = new int[ds.Tables[0].Rows.Count];
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                Ids[i] = Convert.ToInt32(ds.Tables[0].Rows[i]["ID_Expense"]);
+
+            }
+
+            query1 = "select Name from Expenses";
+
+            ds = fn.getData(query1);
+            string[] name = new string[ds.Tables[0].Rows.Count];
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                name[i] = Convert.ToString(ds.Tables[0].Rows[i]["Name"]);
+            }
+
+            query1 = "Select Amount from Expenses";
+            ds = fn.getData(query1);
+
+
+            decimal[] price = new decimal[ds.Tables[0].Rows.Count];
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                price[i] = Convert.ToDecimal(ds.Tables[0].Rows[i]["Amount"].ToString());
+
+            }
+
+            cbmExpenseID.DataSource = Ids;
+            cbmExpenseName.DataSource = name;
+            cbmExpensePrice.DataSource = price;
+        }
     }
 }

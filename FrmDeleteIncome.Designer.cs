@@ -45,9 +45,9 @@
             this.lblSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelect.Location = new System.Drawing.Point(29, 24);
             this.lblSelect.Name = "lblSelect";
-            this.lblSelect.Size = new System.Drawing.Size(140, 25);
+            this.lblSelect.Size = new System.Drawing.Size(141, 25);
             this.lblSelect.TabIndex = 2;
-            this.lblSelect.Text = "Odaberi trošak";
+            this.lblSelect.Text = "Odaberi prihod";
             // 
             // lblID
             // 
@@ -63,18 +63,18 @@
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(31, 121);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(37, 13);
             this.lblName.TabIndex = 8;
-            this.lblName.Text = "Name:";
+            this.lblName.Text = "Naziv:";
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Location = new System.Drawing.Point(31, 146);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(34, 13);
+            this.lblPrice.Size = new System.Drawing.Size(35, 13);
             this.lblPrice.TabIndex = 10;
-            this.lblPrice.Text = "Price:";
+            this.lblPrice.Text = "Iznos:";
             // 
             // cbmIncomeID
             // 
@@ -116,7 +116,7 @@
             this.btnDeleteIncome.Name = "btnDeleteIncome";
             this.btnDeleteIncome.Size = new System.Drawing.Size(113, 23);
             this.btnDeleteIncome.TabIndex = 19;
-            this.btnDeleteIncome.Text = "Delete Income";
+            this.btnDeleteIncome.Text = "Izbriši prihod";
             this.btnDeleteIncome.UseVisualStyleBackColor = true;
             this.btnDeleteIncome.Click += new System.EventHandler(this.btnDeleteIncome_Click);
             // 
@@ -136,6 +136,7 @@
             this.Controls.Add(this.lblSelect);
             this.Name = "FrmDeleteIncome";
             this.Text = "FrmDeleteIncome";
+            this.Load += new System.EventHandler(this.FrmDeleteIncome_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

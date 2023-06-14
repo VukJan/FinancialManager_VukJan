@@ -31,7 +31,6 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblCheckExpense = new System.Windows.Forms.Label();
             this.dgvCheckExpense = new System.Windows.Forms.DataGridView();
-            this.btnCheckExpense = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckExpense)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,21 +63,11 @@
             this.dgvCheckExpense.TabIndex = 2;
             this.dgvCheckExpense.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCheckExpense_CellContentClick);
             // 
-            // btnCheckExpense
-            // 
-            this.btnCheckExpense.Location = new System.Drawing.Point(653, 399);
-            this.btnCheckExpense.Name = "btnCheckExpense";
-            this.btnCheckExpense.Size = new System.Drawing.Size(135, 39);
-            this.btnCheckExpense.TabIndex = 3;
-            this.btnCheckExpense.Text = "More details!";
-            this.btnCheckExpense.UseVisualStyleBackColor = true;
-            // 
             // FrmCheckExpense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnCheckExpense);
             this.Controls.Add(this.dgvCheckExpense);
             this.Controls.Add(this.lblCheckExpense);
             this.Controls.Add(this.btnClose);
@@ -96,6 +85,5 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblCheckExpense;
         private System.Windows.Forms.DataGridView dgvCheckExpense;
-        private System.Windows.Forms.Button btnCheckExpense;
     }
 }

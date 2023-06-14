@@ -14,7 +14,6 @@ namespace FinancialManager_VukJan
     public partial class FrmAddIncome : Form
     {
         Baza fn = new Baza();
-        Random rnd = new Random();
         public FrmAddIncome()
         {
             InitializeComponent();
@@ -27,30 +26,27 @@ namespace FinancialManager_VukJan
 
         private void btnAddIncome_Click(object sender, EventArgs e)
         {
-            int value = rnd.Next(1, 20000);
-            string query1 = "Select * from Paycheck where ID_Paycheck='" + value + "'";
-            DataSet ds = fn.getData(query1);
 
-            while (ds.Tables.Count < 0)
-            {
-                value = rnd.Next(1, 20000);
+            string maxIdQuery = "Select MAX(ID_Paycheck) FROM Paycheck";
+            object result = fn.getData(maxIdQuery).Tables[0].Rows[0][0];
+            int maxId = result != DBNull.Value ? Convert.ToInt32(result) : 0;
 
-                query1 = "Select * from Paycheck where ID_Paycheck='" + value + "'";
-                ds = fn.getData(query1);
-            }
+
+            int newID = maxId + 1;
 
             Income ic = new Income
             {
-                ID = value,
+                ID = newID,
                 Name = txtIncomeName.Text,
-                Description = txtIncomeDescription.Text,
                 Amount = Convert.ToDecimal(txtIncomeAmount.Text),
-
+                Description = txtIncomeDescription.Text,
             };
 
-            string query = "Insert into Paycheck (ID_Paycheck, Name, Amount, Description) values('" + ic.ID + "','" + ic.Name + "','" + ic.Amount + "','" + ic.Description + "') ";
+            string query = "Insert INTO Paycheck (ID_Paycheck, Name, Amount, Description) values('" + +ic.ID + "','" + ic.Name + "','" + ic.Amount + "','" + ic.Description + "') ";
 
-            fn.setData(query, "Prihod uspješno unesen!");
+            fn.setData(query, "Prihod je uspješno unesen!");
+         
+          
         }
     }
 }

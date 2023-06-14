@@ -49,7 +49,7 @@ namespace FinancialManager_VukJan.Models___Classes
             cmd.ExecuteNonQuery();
             connect.Close() ;
 
-            MessageBox.Show(message, "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information );
+            MessageBox.Show(message, "Informacija!", MessageBoxButtons.OK, MessageBoxIcon.Information );
         }
 
     }

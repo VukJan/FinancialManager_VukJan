@@ -67,25 +67,24 @@
             this.lblID.Size = new System.Drawing.Size(21, 13);
             this.lblID.TabIndex = 6;
             this.lblID.Text = "ID:";
-            
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(24, 103);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(37, 13);
             this.lblName.TabIndex = 7;
-            this.lblName.Text = "Name:";
+            this.lblName.Text = "Naziv:";
             // 
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
             this.lblPrice.Location = new System.Drawing.Point(24, 129);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(34, 13);
+            this.lblPrice.Size = new System.Drawing.Size(67, 13);
             this.lblPrice.TabIndex = 9;
-            this.lblPrice.Text = "Price:";
+            this.lblPrice.Text = "Iznos troška:";
             // 
             // btnDeleteExpense
             // 
@@ -93,7 +92,7 @@
             this.btnDeleteExpense.Name = "btnDeleteExpense";
             this.btnDeleteExpense.Size = new System.Drawing.Size(113, 23);
             this.btnDeleteExpense.TabIndex = 10;
-            this.btnDeleteExpense.Text = "Delete expense!";
+            this.btnDeleteExpense.Text = "Izbriši trošak!";
             this.btnDeleteExpense.UseVisualStyleBackColor = true;
             this.btnDeleteExpense.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -137,6 +136,7 @@
             this.Controls.Add(this.btnClose);
             this.Name = "FrmDeleteExpense";
             this.Text = "Aplikacija za praćenje financija";
+            this.Load += new System.EventHandler(this.FrmDeleteExpense_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

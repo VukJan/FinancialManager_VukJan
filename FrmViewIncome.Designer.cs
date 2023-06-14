@@ -31,7 +31,6 @@
             this.lblViewIncome = new System.Windows.Forms.Label();
             this.dgvViewIncome = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnViewIncome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewIncome)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,22 +63,11 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnViewIncome
-            // 
-            this.btnViewIncome.Location = new System.Drawing.Point(653, 399);
-            this.btnViewIncome.Name = "btnViewIncome";
-            this.btnViewIncome.Size = new System.Drawing.Size(135, 39);
-            this.btnViewIncome.TabIndex = 5;
-            this.btnViewIncome.Text = "Više detalja!";
-            this.btnViewIncome.UseVisualStyleBackColor = true;
-            this.btnViewIncome.Click += new System.EventHandler(this.btnViewIncome_Click);
-            // 
             // FrmViewIncome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnViewIncome);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvViewIncome);
             this.Controls.Add(this.lblViewIncome);
@@ -97,6 +85,5 @@
         private System.Windows.Forms.Label lblViewIncome;
         private System.Windows.Forms.DataGridView dgvViewIncome;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnViewIncome;
     }
 }

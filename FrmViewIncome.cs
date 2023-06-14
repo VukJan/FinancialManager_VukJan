@@ -41,16 +41,11 @@ namespace FinancialManager_VukJan
 
         private void FrmViewIncome_Load(object sender, EventArgs e)
         {
-            string query1 = "Select * from Paycheck";
-            DataSet ds = fn.getData(query1);
+            string query = "Select * from Paycheck";
+            DataSet ds = fn.getData(query);
             dgvViewIncome.DataSource = ds.Tables[0];
         }
 
-        private void btnViewIncome_Click(object sender, EventArgs e)
-        {
-            FrmUpdateIncomes detail = new FrmUpdateIncomes();
-            detail.BringToFront();
-            detail.ShowDialog();
-        }
+      
     }
 }

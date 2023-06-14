@@ -14,7 +14,6 @@ namespace FinancialManager_VukJan
     public partial class FrmAddExpense : Form
     {
         Baza fn = new Baza();
-        Random rndom = new Random();
 
         public FrmAddExpense()
         {
@@ -41,37 +40,32 @@ namespace FinancialManager_VukJan
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            int value = rndom.Next(1,20000);
-            string query1 = "Select * from Paycheck where ID_Paycheck='" + value + "'";
-            DataSet ds = fn.getData(query1);
+            string maxIdQuery = "Select Max(ID_Expense) FROM Expenses";
+            object result = fn.getData(maxIdQuery).Tables[0].Rows[0][0];
+            int maxId = result != DBNull.Value ? Convert.ToInt32(result) : 0;
 
-            while(ds.Tables.Count < 0)
-            {
-                value = rndom.Next(1, 20000);
 
-                query1 = "Select ID, Name, Price, Description, Needed from Paycheck where ID_Paycheck='" + value + "'";
-                ds = fn.getData(query1);
-            }
+            int newId = maxId + 1;
             bool flag = false;
 
-            if (cbmNeeded.SelectedIndex.ToString() == "Yes")
+            if (cbmNeeded.SelectedIndex.ToString() == "Da")
             {
                 flag = true;
             }
-            Expense ec = new Expense
-            {
-                ID = value,
-                Name = txtExpenseName.Text,
-                Description = txtExpenseDescription.Text,
-                //DateTime = datePicker1.Value.Date,
-                Price = Convert.ToDecimal(txtExpenseAmount.Text),
-                Needed = flag
 
+            Expense ec = new Expense()
+            {
+                ID = newId,
+                Name = txtExpenseName.Text,
+                Price = Convert.ToDecimal(txtExpenseAmount.Text),
+                Description = txtExpenseDescription.Text,
+                Needed = flag
             };
 
             string query = "Insert into Expenses (ID_Expense, Name, Amount, Description, Needed) values ('" + ec.ID + "','" + ec.Name + "','" + ec.Price + "','" + ec.Description + "','" /* + ec.DateTime + "','" */ + ec.Needed + "') ";
 
-            fn.setData(query, "Uspješno uneseni trošak!");
+            fn.setData(query, "Trošak uspješno unesen!");
+       
 
         }
 

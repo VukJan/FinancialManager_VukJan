@@ -14,7 +14,7 @@ namespace FinancialManager_VukJan
     public partial class FrmCheckExpense : Form
     {
         Baza fn = new Baza();
-        Expense e1 = new Expense();
+        Expense ec = new Expense();
         public FrmCheckExpense()
         {
             InitializeComponent();
@@ -34,18 +34,18 @@ namespace FinancialManager_VukJan
             string description = dgvCheckExpense.Rows[e.RowIndex].Cells[4].Value.ToString();
 
 
-            e1.ID = Convert.ToInt32(id);
-            e1.Name = name;        
-            e1.Price = amount;
-            e1.Needed = needed;
-            e1.Description = description;
+            ec.ID = Convert.ToInt32(id);
+            ec.Name = name;        
+            ec.Price = amount;
+            ec.Needed = needed;
+            ec.Description = description;
 
         }
 
         private void FrmCheckExpense_Load(object sender, EventArgs e)
         {
-            string query1 = "Select * from Expenses";
-            DataSet ds = fn.getData(query1);
+            string query = "Select * from Expenses";
+            DataSet ds = fn.getData(query);
             dgvCheckExpense.DataSource = ds.Tables[0];
         }
     }
