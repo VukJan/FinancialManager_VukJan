@@ -62,6 +62,7 @@
             this.dgvCheckExpense.Name = "dgvCheckExpense";
             this.dgvCheckExpense.Size = new System.Drawing.Size(776, 342);
             this.dgvCheckExpense.TabIndex = 2;
+            this.dgvCheckExpense.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCheckExpense_CellContentClick);
             // 
             // btnCheckExpense
             // 
@@ -71,7 +72,6 @@
             this.btnCheckExpense.TabIndex = 3;
             this.btnCheckExpense.Text = "More details!";
             this.btnCheckExpense.UseVisualStyleBackColor = true;
-            this.btnCheckExpense.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmCheckExpense
             // 
@@ -84,6 +84,7 @@
             this.Controls.Add(this.btnClose);
             this.Name = "FrmCheckExpense";
             this.Text = "Aplikacija za praćenje financija";
+            this.Load += new System.EventHandler(this.FrmCheckExpense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCheckExpense)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,7 +11,6 @@ namespace FinancialManager_VukJan.Models___Classes
         public int ID { get; set; }
 
         public string Name { get; set; }
-        public DateTime DateTime { get; set; }
         public string Description { get; set; }
         public decimal Amount { get; set; }
     }

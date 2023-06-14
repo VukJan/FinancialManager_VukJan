@@ -67,7 +67,7 @@
             this.lblID.Size = new System.Drawing.Size(21, 13);
             this.lblID.TabIndex = 6;
             this.lblID.Text = "ID:";
-            this.lblID.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // lblName
             // 

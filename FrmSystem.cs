@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialManager_VukJan.Models___Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace FinancialManager_VukJan
 {
     public partial class FrmSystem : Form
     {
+        Baza fn= new Baza();
         public FrmSystem()
         {
             InitializeComponent();
@@ -28,11 +30,7 @@ namespace FinancialManager_VukJan
             
             frmAddExepense.ShowDialog();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+    
 
         private void btnCheckExpense_Click(object sender, EventArgs e)
         {
@@ -95,6 +93,13 @@ namespace FinancialManager_VukJan
         {
             FrmDeleteIncome frmDeleteIncome = new FrmDeleteIncome();
             frmDeleteIncome.ShowDialog();
+        }
+
+        private void FrmSystem_Load(object sender, EventArgs e)
+        {
+            string query1 = "Select Amount from Expenses";
+            DataSet ds = fn.getData(query1);
+            dgvCurrent.DataSource = ds.Tables[0];
         }
     }
 }

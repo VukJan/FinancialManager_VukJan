@@ -52,6 +52,7 @@
             this.dgvViewIncome.Name = "dgvViewIncome";
             this.dgvViewIncome.Size = new System.Drawing.Size(776, 342);
             this.dgvViewIncome.TabIndex = 3;
+            this.dgvViewIncome.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvViewIncome_CellContentClick);
             // 
             // btnClose
             // 
@@ -69,8 +70,9 @@
             this.btnViewIncome.Name = "btnViewIncome";
             this.btnViewIncome.Size = new System.Drawing.Size(135, 39);
             this.btnViewIncome.TabIndex = 5;
-            this.btnViewIncome.Text = "More details!";
+            this.btnViewIncome.Text = "Više detalja!";
             this.btnViewIncome.UseVisualStyleBackColor = true;
+            this.btnViewIncome.Click += new System.EventHandler(this.btnViewIncome_Click);
             // 
             // FrmViewIncome
             // 
@@ -83,6 +85,7 @@
             this.Controls.Add(this.lblViewIncome);
             this.Name = "FrmViewIncome";
             this.Text = "FrmViewIncome";
+            this.Load += new System.EventHandler(this.FrmViewIncome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewIncome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

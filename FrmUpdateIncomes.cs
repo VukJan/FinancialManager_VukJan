@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinancialManager_VukJan.Models___Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,11 @@ using System.Windows.Forms;
 
 namespace FinancialManager_VukJan
 {
-    public partial class FrmUpdateExpense : Form
+    public partial class FrmUpdateIncomes : Form
     {
-        public FrmUpdateExpense()
+    
+
+        public FrmUpdateIncomes()
         {
             InitializeComponent();
         }
@@ -22,6 +25,11 @@ namespace FinancialManager_VukJan
             Close();
         }
 
-        
+
+
+        private void FrmUpdateIncomes_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

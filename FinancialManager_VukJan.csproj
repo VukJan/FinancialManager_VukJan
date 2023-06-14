@@ -112,12 +112,19 @@
     <Compile Include="FrmUpdateIncome.Designer.cs">
       <DependentUpon>FrmUpdateIncome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUpdateIncomes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateIncomes.Designer.cs">
+      <DependentUpon>FrmUpdateIncomes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmViewIncome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmViewIncome.Designer.cs">
       <DependentUpon>FrmViewIncome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models - Classes\Baza.cs" />
     <Compile Include="Models - Classes\Expense.cs" />
     <Compile Include="Models - Classes\Income.cs" />
     <Compile Include="Program.cs" />
@@ -154,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUpdateIncome.resx">
       <DependentUpon>FrmUpdateIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateIncomes.resx">
+      <DependentUpon>FrmUpdateIncomes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmViewIncome.resx">
       <DependentUpon>FrmViewIncome.cs</DependentUpon>

@@ -34,14 +34,14 @@
             this.btnDeleteExpense = new System.Windows.Forms.Button();
             this.btnUpdateExpense = new System.Windows.Forms.Button();
             this.lblExpenses = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCurrent = new System.Windows.Forms.DataGridView();
             this.btnInsertIncome = new System.Windows.Forms.Button();
             this.btnIXO = new System.Windows.Forms.Button();
             this.btnViewIncome = new System.Windows.Forms.Button();
             this.btnUpdateIncome = new System.Windows.Forms.Button();
             this.btnDeleteIncome = new System.Windows.Forms.Button();
             this.lblOptions = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -60,7 +60,7 @@
             this.btnInsertExpense.Name = "btnInsertExpense";
             this.btnInsertExpense.Size = new System.Drawing.Size(124, 23);
             this.btnInsertExpense.TabIndex = 1;
-            this.btnInsertExpense.Text = "Add expense";
+            this.btnInsertExpense.Text = "Dodaj trošak";
             this.btnInsertExpense.UseVisualStyleBackColor = true;
             this.btnInsertExpense.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -70,7 +70,7 @@
             this.btnViewExpense.Name = "btnViewExpense";
             this.btnViewExpense.Size = new System.Drawing.Size(124, 23);
             this.btnViewExpense.TabIndex = 2;
-            this.btnViewExpense.Text = "View Expenses";
+            this.btnViewExpense.Text = "Pregledaj troškove";
             this.btnViewExpense.UseVisualStyleBackColor = true;
             this.btnViewExpense.Click += new System.EventHandler(this.btnCheckExpense_Click);
             // 
@@ -80,7 +80,7 @@
             this.btnDeleteExpense.Name = "btnDeleteExpense";
             this.btnDeleteExpense.Size = new System.Drawing.Size(124, 23);
             this.btnDeleteExpense.TabIndex = 3;
-            this.btnDeleteExpense.Text = "Delete expense";
+            this.btnDeleteExpense.Text = "Izbrisi trosak";
             this.btnDeleteExpense.UseVisualStyleBackColor = true;
             this.btnDeleteExpense.Click += new System.EventHandler(this.btnDeleteExpense_Click);
             // 
@@ -90,7 +90,7 @@
             this.btnUpdateExpense.Name = "btnUpdateExpense";
             this.btnUpdateExpense.Size = new System.Drawing.Size(124, 23);
             this.btnUpdateExpense.TabIndex = 4;
-            this.btnUpdateExpense.Text = "Update expense";
+            this.btnUpdateExpense.Text = "Azuriraj troskove";
             this.btnUpdateExpense.UseVisualStyleBackColor = true;
             this.btnUpdateExpense.Click += new System.EventHandler(this.btnUpdateExpense_Click);
             // 
@@ -99,18 +99,17 @@
             this.lblExpenses.AutoSize = true;
             this.lblExpenses.Location = new System.Drawing.Point(531, 23);
             this.lblExpenses.Name = "lblExpenses";
-            this.lblExpenses.Size = new System.Drawing.Size(93, 13);
+            this.lblExpenses.Size = new System.Drawing.Size(89, 13);
             this.lblExpenses.TabIndex = 5;
-            this.lblExpenses.Text = "Current Expenses:";
-            this.lblExpenses.Click += new System.EventHandler(this.label1_Click);
+            this.lblExpenses.Text = "Trenutni troškovi:";
             // 
-            // dataGridView1
+            // dgvCurrent
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(456, 55);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvCurrent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCurrent.Location = new System.Drawing.Point(522, 51);
+            this.dgvCurrent.Name = "dgvCurrent";
+            this.dgvCurrent.Size = new System.Drawing.Size(130, 138);
+            this.dgvCurrent.TabIndex = 6;
             // 
             // btnInsertIncome
             // 
@@ -118,7 +117,7 @@
             this.btnInsertIncome.Name = "btnInsertIncome";
             this.btnInsertIncome.Size = new System.Drawing.Size(124, 23);
             this.btnInsertIncome.TabIndex = 7;
-            this.btnInsertIncome.Text = "Add Income";
+            this.btnInsertIncome.Text = "Dodaj prihod";
             this.btnInsertIncome.UseVisualStyleBackColor = true;
             this.btnInsertIncome.Click += new System.EventHandler(this.btnPaycheck_Click);
             // 
@@ -128,7 +127,7 @@
             this.btnIXO.Name = "btnIXO";
             this.btnIXO.Size = new System.Drawing.Size(150, 23);
             this.btnIXO.TabIndex = 8;
-            this.btnIXO.Text = "Income X Outcome - details";
+            this.btnIXO.Text = "Prihod X Trošak - detalji";
             this.btnIXO.UseVisualStyleBackColor = true;
             this.btnIXO.Click += new System.EventHandler(this.btnIXO_Click);
             // 
@@ -138,7 +137,7 @@
             this.btnViewIncome.Name = "btnViewIncome";
             this.btnViewIncome.Size = new System.Drawing.Size(124, 23);
             this.btnViewIncome.TabIndex = 9;
-            this.btnViewIncome.Text = "View Total Income";
+            this.btnViewIncome.Text = "Pregledaj prihode";
             this.btnViewIncome.UseVisualStyleBackColor = true;
             this.btnViewIncome.Click += new System.EventHandler(this.btnViewIncome_Click);
             // 
@@ -148,7 +147,7 @@
             this.btnUpdateIncome.Name = "btnUpdateIncome";
             this.btnUpdateIncome.Size = new System.Drawing.Size(124, 23);
             this.btnUpdateIncome.TabIndex = 10;
-            this.btnUpdateIncome.Text = "Update Income row";
+            this.btnUpdateIncome.Text = "Azuriraj prihode";
             this.btnUpdateIncome.UseVisualStyleBackColor = true;
             this.btnUpdateIncome.Click += new System.EventHandler(this.btnUpdateIncome_Click);
             // 
@@ -158,7 +157,7 @@
             this.btnDeleteIncome.Name = "btnDeleteIncome";
             this.btnDeleteIncome.Size = new System.Drawing.Size(124, 23);
             this.btnDeleteIncome.TabIndex = 11;
-            this.btnDeleteIncome.Text = "Delete income row";
+            this.btnDeleteIncome.Text = "Izbrisi prihod";
             this.btnDeleteIncome.UseVisualStyleBackColor = true;
             this.btnDeleteIncome.Click += new System.EventHandler(this.btnDeleteIncome_Click);
             // 
@@ -167,9 +166,9 @@
             this.lblOptions.AutoSize = true;
             this.lblOptions.Location = new System.Drawing.Point(42, 23);
             this.lblOptions.Name = "lblOptions";
-            this.lblOptions.Size = new System.Drawing.Size(93, 13);
+            this.lblOptions.Size = new System.Drawing.Size(78, 13);
             this.lblOptions.TabIndex = 12;
-            this.lblOptions.Text = "Choose an option:";
+            this.lblOptions.Text = "Odaberi opciju:";
             // 
             // FrmSystem
             // 
@@ -182,7 +181,7 @@
             this.Controls.Add(this.btnViewIncome);
             this.Controls.Add(this.btnIXO);
             this.Controls.Add(this.btnInsertIncome);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCurrent);
             this.Controls.Add(this.lblExpenses);
             this.Controls.Add(this.btnUpdateExpense);
             this.Controls.Add(this.btnDeleteExpense);
@@ -192,7 +191,8 @@
             this.Name = "FrmSystem";
             this.Text = "Aplikacija za praćenje financija";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSystem_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmSystem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCurrent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +206,7 @@
         private System.Windows.Forms.Button btnDeleteExpense;
         private System.Windows.Forms.Button btnUpdateExpense;
         private System.Windows.Forms.Label lblExpenses;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCurrent;
         private System.Windows.Forms.Button btnInsertIncome;
         private System.Windows.Forms.Button btnIXO;
         private System.Windows.Forms.Button btnViewIncome;

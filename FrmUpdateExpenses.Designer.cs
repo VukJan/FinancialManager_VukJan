@@ -96,7 +96,7 @@
             this.cbmExpenseName.Name = "cbmExpenseName";
             this.cbmExpenseName.Size = new System.Drawing.Size(135, 21);
             this.cbmExpenseName.TabIndex = 7;
-            this.cbmExpenseName.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+           
             // 
             // FrmUpdateExpenses
             // 
