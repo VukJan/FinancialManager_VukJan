@@ -40,16 +40,14 @@ namespace FinancialManager_VukJan.Models___Classes
         public void setData(string query, string message)
         {
             SqlConnection connect = getConnection();
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.Connection = connect;
+            SqlCommand cmd = new SqlCommand(message, connect);
             connect.Open();
             cmd.CommandText = query;
 
             cmd.ExecuteNonQuery();
-            connect.Close() ;
+            connect.Close();
 
-            MessageBox.Show(message, "Informacija!", MessageBoxButtons.OK, MessageBoxIcon.Information );
+            MessageBox.Show(message, "Informacija!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
     }

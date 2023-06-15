@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvUpdateIncome = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lblSelect = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUpdateIncome)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvUpdateIncome
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 53);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 344);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvUpdateIncome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUpdateIncome.Location = new System.Drawing.Point(12, 53);
+            this.dgvUpdateIncome.Name = "dgvUpdateIncome";
+            this.dgvUpdateIncome.Size = new System.Drawing.Size(776, 344);
+            this.dgvUpdateIncome.TabIndex = 2;
+            this.dgvUpdateIncome.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUpdateIncome_CellContentClick);
             // 
             // btnClose
             // 
@@ -61,6 +62,7 @@
             this.btnUpdate.TabIndex = 4;
             this.btnUpdate.Text = " Ažuriraj prihode";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lblSelect
             // 
@@ -80,10 +82,11 @@
             this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvUpdateIncome);
             this.Name = "FrmUpdateIncome";
             this.Text = "FrmUpdateIncome";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmUpdateIncome_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUpdateIncome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,7 +94,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUpdateIncome;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label lblSelect;

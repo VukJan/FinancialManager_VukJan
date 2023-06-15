@@ -52,7 +52,7 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Location = new System.Drawing.Point(31, 98);
+            this.lblID.Location = new System.Drawing.Point(31, 75);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(21, 13);
             this.lblID.TabIndex = 7;
@@ -61,7 +61,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(31, 121);
+            this.lblName.Location = new System.Drawing.Point(31, 103);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(37, 13);
             this.lblName.TabIndex = 8;
@@ -70,7 +70,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(31, 146);
+            this.lblPrice.Location = new System.Drawing.Point(31, 133);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(35, 13);
             this.lblPrice.TabIndex = 10;
@@ -79,7 +79,7 @@
             // cbmIncomeID
             // 
             this.cbmIncomeID.FormattingEnabled = true;
-            this.cbmIncomeID.Location = new System.Drawing.Point(91, 95);
+            this.cbmIncomeID.Location = new System.Drawing.Point(91, 75);
             this.cbmIncomeID.Name = "cbmIncomeID";
             this.cbmIncomeID.Size = new System.Drawing.Size(208, 21);
             this.cbmIncomeID.TabIndex = 13;
@@ -87,7 +87,7 @@
             // cbmIncomeName
             // 
             this.cbmIncomeName.FormattingEnabled = true;
-            this.cbmIncomeName.Location = new System.Drawing.Point(91, 122);
+            this.cbmIncomeName.Location = new System.Drawing.Point(91, 103);
             this.cbmIncomeName.Name = "cbmIncomeName";
             this.cbmIncomeName.Size = new System.Drawing.Size(208, 21);
             this.cbmIncomeName.TabIndex = 16;
@@ -95,7 +95,7 @@
             // cbmIncomePrice
             // 
             this.cbmIncomePrice.FormattingEnabled = true;
-            this.cbmIncomePrice.Location = new System.Drawing.Point(91, 149);
+            this.cbmIncomePrice.Location = new System.Drawing.Point(91, 130);
             this.cbmIncomePrice.Name = "cbmIncomePrice";
             this.cbmIncomePrice.Size = new System.Drawing.Size(208, 21);
             this.cbmIncomePrice.TabIndex = 17;

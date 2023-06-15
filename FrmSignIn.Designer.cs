@@ -41,7 +41,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(273, 100);
+            this.btnLogin.Location = new System.Drawing.Point(332, 115);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(3, 100);
+            this.btnClose.Location = new System.Drawing.Point(3, 115);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 1;
@@ -61,14 +61,14 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(115, 12);
+            this.txtUsername.Location = new System.Drawing.Point(98, 36);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 2;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(115, 51);
+            this.txtPassword.Location = new System.Drawing.Point(98, 67);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
@@ -77,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 19);
+            this.label1.Location = new System.Drawing.Point(14, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 4;
@@ -86,7 +86,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 58);
+            this.label2.Location = new System.Drawing.Point(45, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 5;
@@ -95,7 +95,7 @@
             // btnEye
             // 
             this.btnEye.Image = ((System.Drawing.Image)(resources.GetObject("btnEye.Image")));
-            this.btnEye.Location = new System.Drawing.Point(221, 51);
+            this.btnEye.Location = new System.Drawing.Point(204, 67);
             this.btnEye.Name = "btnEye";
             this.btnEye.Size = new System.Drawing.Size(35, 20);
             this.btnEye.TabIndex = 6;
@@ -107,7 +107,7 @@
             this.btnEyeclose.BackColor = System.Drawing.Color.White;
             this.btnEyeclose.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEyeclose.Image = ((System.Drawing.Image)(resources.GetObject("btnEyeclose.Image")));
-            this.btnEyeclose.Location = new System.Drawing.Point(262, 51);
+            this.btnEyeclose.Location = new System.Drawing.Point(245, 67);
             this.btnEyeclose.Name = "btnEyeclose";
             this.btnEyeclose.Size = new System.Drawing.Size(27, 20);
             this.btnEyeclose.TabIndex = 7;
@@ -118,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 126);
+            this.ClientSize = new System.Drawing.Size(435, 150);
             this.Controls.Add(this.btnEyeclose);
             this.Controls.Add(this.btnEye);
             this.Controls.Add(this.label2);

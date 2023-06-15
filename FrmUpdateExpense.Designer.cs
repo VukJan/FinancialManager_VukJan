@@ -52,15 +52,17 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 344);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(661, 405);
+            this.btnUpdate.Location = new System.Drawing.Point(654, 405);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(127, 43);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Azuriraj trošak";
+            this.btnUpdate.Text = "Ažuriraj trošak";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // lblSelect
             // 
@@ -83,6 +85,7 @@
             this.Controls.Add(this.btnClose);
             this.Name = "FrmUpdateExpense";
             this.Text = "Aplikacija za praćenje financija";
+            this.Load += new System.EventHandler(this.FrmUpdateExpense_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
