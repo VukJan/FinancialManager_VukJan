@@ -28,21 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblViewIncome = new System.Windows.Forms.Label();
             this.dgvViewIncome = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblSelect = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvViewIncome)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblViewIncome
-            // 
-            this.lblViewIncome.AutoSize = true;
-            this.lblViewIncome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.3F);
-            this.lblViewIncome.Location = new System.Drawing.Point(12, 9);
-            this.lblViewIncome.Name = "lblViewIncome";
-            this.lblViewIncome.Size = new System.Drawing.Size(106, 15);
-            this.lblViewIncome.TabIndex = 2;
-            this.lblViewIncome.Text = "View of all Income";
             // 
             // dgvViewIncome
             // 
@@ -59,18 +49,28 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 39);
             this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblSelect
+            // 
+            this.lblSelect.AutoSize = true;
+            this.lblSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelect.Location = new System.Drawing.Point(12, 9);
+            this.lblSelect.Name = "lblSelect";
+            this.lblSelect.Size = new System.Drawing.Size(176, 25);
+            this.lblSelect.TabIndex = 5;
+            this.lblSelect.Text = "Prikaz svih prihoda";
             // 
             // FrmViewIncome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(796, 447);
+            this.Controls.Add(this.lblSelect);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvViewIncome);
-            this.Controls.Add(this.lblViewIncome);
             this.Name = "FrmViewIncome";
             this.Text = "FrmViewIncome";
             this.Load += new System.EventHandler(this.FrmViewIncome_Load);
@@ -81,9 +81,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblViewIncome;
         private System.Windows.Forms.DataGridView dgvViewIncome;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblSelect;
     }
 }

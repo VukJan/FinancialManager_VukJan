@@ -43,7 +43,7 @@
             // 
             this.lblSelect.AutoSize = true;
             this.lblSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelect.Location = new System.Drawing.Point(29, 24);
+            this.lblSelect.Location = new System.Drawing.Point(12, 19);
             this.lblSelect.Name = "lblSelect";
             this.lblSelect.Size = new System.Drawing.Size(141, 25);
             this.lblSelect.TabIndex = 2;
@@ -102,9 +102,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(12, 283);
+            this.btnClose.Location = new System.Drawing.Point(12, 270);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(92, 36);
             this.btnClose.TabIndex = 18;
             this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@
             // 
             // btnDeleteIncome
             // 
-            this.btnDeleteIncome.Location = new System.Drawing.Point(482, 283);
+            this.btnDeleteIncome.Location = new System.Drawing.Point(287, 269);
             this.btnDeleteIncome.Name = "btnDeleteIncome";
-            this.btnDeleteIncome.Size = new System.Drawing.Size(113, 23);
+            this.btnDeleteIncome.Size = new System.Drawing.Size(128, 36);
             this.btnDeleteIncome.TabIndex = 19;
             this.btnDeleteIncome.Text = "Izbriši prihod";
             this.btnDeleteIncome.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 318);
+            this.ClientSize = new System.Drawing.Size(475, 315);
             this.Controls.Add(this.btnDeleteIncome);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.cbmIncomePrice);

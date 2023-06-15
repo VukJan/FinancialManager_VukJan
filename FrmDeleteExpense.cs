@@ -29,7 +29,7 @@ namespace FinancialManager_VukJan
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure?", "Izbrisati trošak?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if(MessageBox.Show("Jeste li sigurni?", "Izbrisati trošak?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int id = Convert.ToInt32(cbmExpenseID.SelectedItem.ToString());
                 string query = "delete from Expenses where ID_Expense='" + id + "'";
@@ -43,9 +43,9 @@ namespace FinancialManager_VukJan
 
         private void FrmDeleteExpense_Load(object sender, EventArgs e)
         {
-            string query1 = "Select ID_Expense from Expenses";
+            string query = "Select ID_Expense from Expenses";
 
-            DataSet ds = fn.getData(query1);
+            DataSet ds = fn.getData(query);
             int[] Ids = new int[ds.Tables[0].Rows.Count];
 
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
@@ -54,17 +54,17 @@ namespace FinancialManager_VukJan
 
             }
 
-            query1 = "select Name from Expenses";
+            query = "select Name from Expenses";
 
-            ds = fn.getData(query1);
+            ds = fn.getData(query);
             string[] name = new string[ds.Tables[0].Rows.Count];
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
                 name[i] = Convert.ToString(ds.Tables[0].Rows[i]["Name"]);
             }
 
-            query1 = "Select Amount from Expenses";
-            ds = fn.getData(query1);
+            query = "Select Amount from Expenses";
+            ds = fn.getData(query);
 
 
             decimal[] price = new decimal[ds.Tables[0].Rows.Count];

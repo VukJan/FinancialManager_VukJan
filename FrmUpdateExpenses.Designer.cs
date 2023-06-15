@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtUpdateDate = new System.Windows.Forms.TextBox();
             this.lblUpdateDate = new System.Windows.Forms.Label();
@@ -43,25 +42,16 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 0;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(567, 392);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(665, 392);
+            this.btnUpdate.Location = new System.Drawing.Point(627, 392);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 2;
-            this.btnUpdate.Text = "Update";
+            this.btnUpdate.Text = "Azuriraj";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // txtUpdateDate
@@ -85,9 +75,9 @@
             this.lblExpenseName.AutoSize = true;
             this.lblExpenseName.Location = new System.Drawing.Point(12, 18);
             this.lblExpenseName.Name = "lblExpenseName";
-            this.lblExpenseName.Size = new System.Drawing.Size(93, 13);
+            this.lblExpenseName.Size = new System.Drawing.Size(69, 13);
             this.lblExpenseName.TabIndex = 6;
-            this.lblExpenseName.Text = "Name of expense:";
+            this.lblExpenseName.Text = "Naziv troška:";
             // 
             // cbmExpenseName
             // 
@@ -96,7 +86,6 @@
             this.cbmExpenseName.Name = "cbmExpenseName";
             this.cbmExpenseName.Size = new System.Drawing.Size(135, 21);
             this.cbmExpenseName.TabIndex = 7;
-           
             // 
             // FrmUpdateExpenses
             // 
@@ -108,7 +97,6 @@
             this.Controls.Add(this.lblUpdateDate);
             this.Controls.Add(this.txtUpdateDate);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Name = "FrmUpdateExpenses";
             this.Text = "FrmUpdateExpenses";
@@ -120,7 +108,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtUpdateDate;
         private System.Windows.Forms.Label lblUpdateDate;

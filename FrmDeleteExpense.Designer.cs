@@ -41,9 +41,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(17, 245);
+            this.btnClose.Location = new System.Drawing.Point(17, 230);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(74, 38);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Zatvori";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@
             // 
             // btnDeleteExpense
             // 
-            this.btnDeleteExpense.Location = new System.Drawing.Point(436, 245);
+            this.btnDeleteExpense.Location = new System.Drawing.Point(397, 230);
             this.btnDeleteExpense.Name = "btnDeleteExpense";
-            this.btnDeleteExpense.Size = new System.Drawing.Size(113, 23);
+            this.btnDeleteExpense.Size = new System.Drawing.Size(113, 38);
             this.btnDeleteExpense.TabIndex = 10;
             this.btnDeleteExpense.Text = "Izbriši trošak!";
             this.btnDeleteExpense.UseVisualStyleBackColor = true;
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 281);
+            this.ClientSize = new System.Drawing.Size(511, 275);
             this.Controls.Add(this.cbmExpenseName);
             this.Controls.Add(this.cbmExpensePrice);
             this.Controls.Add(this.cbmExpenseID);
